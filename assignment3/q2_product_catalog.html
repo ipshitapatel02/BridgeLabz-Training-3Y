@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <h1>Online Store - Product Catalog</h1>
+
+    <!-- Product table with columns: Name, Description, Price, Availability -->
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+
+        <!-- Product 1 -->
+        <tr>
+            <td><img src="laptop.jpg" alt="Laptop" width="100"></td>
+            <td>Laptop</td>
+            <td>15-inch laptop with 8GB RAM and 512GB SSD</td>
+            <td>₹45,000</td>
+            <td>In Stock</td>
+        </tr>
+
+        <!-- Product 2 -->
+        <tr>
+            <td><img src="headphones.jpg" alt="Headphones" width="100"></td>
+            <td>Wireless Headphones</td>
+            <td>Noise-cancelling over-ear headphones</td>
+            <td>₹2,500</td>
+            <td>In Stock</td>
+        </tr>
+
+        <!-- Product 3: uses rowspan to show two variants sharing same description/price -->
+        <tr>
+            <td rowspan="2"><img src="tshirt.jpg" alt="T-Shirt" width="100"></td>
+            <td>Cotton T-Shirt (Blue)</td>
+            <td rowspan="2">100% cotton, unisex, machine washable</td>
+            <td rowspan="2">₹499</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Cotton T-Shirt (Red)</td>
+            <td>Out of Stock</td>
+        </tr>
+
+        <!-- Product 4: uses colspan for a discontinued notice -->
+        <tr>
+            <td><img src="watch.jpg" alt="Smart Watch" width="100"></td>
+            <td>Smart Watch</td>
+            <td colspan="3">Discontinued - Not available for purchase</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

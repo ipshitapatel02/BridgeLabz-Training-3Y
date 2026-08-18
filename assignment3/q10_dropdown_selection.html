@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown-based Selection Page</title>
+</head>
+<body>
+
+    <h1>Travel Preference Selector</h1>
+
+    <form action="#" method="post">
+
+        <!-- Country dropdown with pre-selected option -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="india" selected>India</option>
+            <option value="japan">Japan</option>
+        </select>
+        <br><br>
+
+        <!-- State dropdown with pre-selected option -->
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="mp">Madhya Pradesh</option>
+            <option value="up" selected>Uttar Pradesh</option>
+            <option value="rj">Rajasthan</option>
+        </select>
+        <br><br>
+
+        <!-- City dropdown with pre-selected option -->
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="lucknow">Lucknow</option>
+            <option value="mathura" selected>Mathura</option>
+            <option value="agra">Agra</option>
+        </select>
+        <br><br>
+
+        <!-- Favorite Tourist Place dropdown with pre-selected option -->
+        <label for="place">Favorite Tourist Place:</label>
+        <select id="place" name="place">
+            <option value="tajmahal" selected>Taj Mahal</option>
+            <option value="redfort">Red Fort</option>
+            <option value="qutubminar">Qutub Minar</option>
+        </select>
+
+    </form>
+
+    <!-- Summary paragraph -->
+    <p>Based on the selections above, the chosen destination is Mathura,
+       Uttar Pradesh, India, with the Taj Mahal as the favorite tourist place.</p>
+
+</body>
+</html>
