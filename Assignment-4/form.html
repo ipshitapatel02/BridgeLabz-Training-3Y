@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q17 - Form Page</title>
+</head>
+<body>
+    <h1>Submit the Form</h1>
+    <form method="get" action="result.html" target="resultFrame">
+        <label for="msg">Enter a message:</label><br>
+        <input type="text" id="msg" name="msg" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- This iframe loads result.html after the form is submitted -->
+    <iframe name="resultFrame" title="Result Frame" width="400" height="200">
+    </iframe>
+</body>
+</html>
