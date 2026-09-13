@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  margin: 0;
+  padding: 3em 1em;
+}
+
+.page-title {
+  text-align: center;
+  color: #1e2a33;
+  margin-bottom: 2em;
+}
+
+.pricing-container {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background-color: #ffffff;
+  border: 2px solid #dfe4e8;
+  border-radius: 10px;
+  padding: 2em;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background-color: #f6faff;
+}
+
+.plan h2 {
+  color: #1e2a33;
+  margin-top: 0;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+  margin: 0.4em 0 1em;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.plan ul li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eef0f2;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2b6cb0;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.7em 1em;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #1e4e80;
+}
+
+.featured {
+  border: 3px dashed #d8a72b;
+  background-color: #fffaf0;
+}

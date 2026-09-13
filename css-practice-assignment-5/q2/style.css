@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #ffffff;
+}
+
+header {
+  background-color: #2b1d0e;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+nav {
+  background-color: #4a3323;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em 0;
+}
+
+nav a {
+  color: #f5e9da;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main section {
+  width: 100%;
+  padding: 5em 10%;
+  border-bottom: 6px solid #2b1d0e;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.6em;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.gradient-linear {
+  background-image: linear-gradient(135deg, #b06a2b, #5c3a1e);
+}
+
+.gradient-radial {
+  background-image: radial-gradient(circle at center, #4b6a4f, #1c2c1e);
+}
+
+.solid-section {
+  background-color: #6b4226;
+}
+
+.solid-section-alt {
+  background-color: #3d2a1c;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background-color: #2b1d0e;
+  text-align: center;
+  padding: 1.5em;
+}

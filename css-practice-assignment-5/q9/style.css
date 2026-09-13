@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ece7da;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2em 3em 4em;
+}
+
+.masthead {
+  column-span: all;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  border-bottom: 4px double #222222;
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+}
+
+.columns {
+  column-count: 3;
+  column-gap: 2.5em;
+  text-align: justify;
+  color: #222222;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.columns p {
+  margin: 0 0 1em;
+}
+
+.float-img {
+  float: left;
+  margin: 0 1em 0.5em 0;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
