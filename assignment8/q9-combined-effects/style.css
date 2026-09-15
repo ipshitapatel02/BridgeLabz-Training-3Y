@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header p {
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* ===== Flexbox distributes the four demo buttons evenly ===== */
+.effects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Each button reads its accent color from the --accent custom property
+   set inline per button, so one rule set styles all four variants. */
+.effect-btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 1rem 1.75rem;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+              background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+/* Combined hover effect: color fill + grow + stronger shadow */
+.effect-btn:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.effect-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+.effect-btn:active {
+  transform: scale(0.97);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}

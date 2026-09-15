@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice</h1>
+  </header>
+
+  <main>
+
+    <section id="element-section">
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled purely by its tag name: <code>p</code>.</p>
+      <p>Every paragraph on the page shares this base style.</p>
+    </section>
+
+    <section>
+      <h2>Class Selector</h2>
+      <p class="highlight">This paragraph has the class <code>.highlight</code> applied to it.</p>
+      <p>This one does not, so it looks like an ordinary paragraph.</p>
+    </section>
+
+    <section>
+      <h2>ID Selector</h2>
+      <p id="unique-note">This paragraph is targeted uniquely using <code>#unique-note</code>.</p>
+    </section>
+
+    <section>
+      <h2>Attribute Selector</h2>
+      <a href="https://example.com" target="_blank">External link (opens in new tab)</a><br>
+      <a href="#element-section">Internal link (same page)</a>
+      <p>Links with <code>target="_blank"</code> are styled differently using an attribute selector.</p>
+    </section>
+
+    <section>
+      <h2>Combinators</h2>
+
+      <div class="combinator-block">
+        <p>Direct child paragraph <code>(div &gt; p)</code></p>
+        <div>
+          <p>Nested paragraph &mdash; NOT a direct child, so unaffected.</p>
+        </div>
+      </div>
+
+      <div class="combinator-block">
+        <h3>Adjacent sibling demo</h3>
+        <p>This paragraph immediately follows the heading <code>(h3 + p)</code>.</p>
+        <p>This paragraph is a later sibling and is unaffected by the adjacent rule.</p>
+      </div>
+
+      <div class="combinator-block">
+        <h3>General sibling demo</h3>
+        <p>Sibling one <code>(h3 ~ p)</code></p>
+        <p>Sibling two, also matched by the general sibling combinator.</p>
+      </div>
+
+      <ul class="descendant-demo">
+        <li>List item <span>with a nested span (descendant selector)</span></li>
+        <li>Plain list item with no nested span</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 4: CSS Selectors Practice</p>
+  </footer>
+</body>
+</html>

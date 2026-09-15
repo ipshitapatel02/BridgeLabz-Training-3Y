@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #101820;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* ===== Flexbox centers all three animation demos ===== */
+.animation-stage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 200px;
+  height: 140px;
+  justify-content: center;
+}
+
+.animation-block p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* ===== 1. Moving box: horizontal loop ===== */
+.moving-box {
+  width: 50px;
+  height: 50px;
+  background-color: #38bdf8;
+  border-radius: 6px;
+  animation: moveBox 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveBox {
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(60px);
+  }
+}
+
+/* ===== 2. Bouncing ball ===== */
+.bouncing-ball {
+  width: 40px;
+  height: 40px;
+  background-color: #f472b6;
+  border-radius: 50%;
+  animation: bounce 1.2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-45px);
+  }
+}
+
+/* ===== 3. Color-changing text ===== */
+.color-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  animation: colorShift 4s ease-in-out infinite;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorShift {
+  0%   { color: #38bdf8; }
+  33%  { color: #f472b6; }
+  66%  { color: #facc15; }
+  100% { color: #4ade80; }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,104 @@
+/* Note: box-sizing is intentionally NOT reset globally here,
+   since this page exists to demonstrate the difference. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem 3rem;
+}
+
+/* ===== Flexbox centers both boxes side by side ===== */
+.comparison-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.box h2 {
+  margin-bottom: 0.5rem;
+}
+
+.box p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.total {
+  font-weight: 600;
+  font-size: 0.8rem !important;
+}
+
+/* ===== content-box: padding & border ADD to the declared width ===== */
+.content-box {
+  box-sizing: content-box;
+  background-color: #fee2e2;
+  border-color: #dc2626;
+  color: #7f1d1d;
+}
+
+/* ===== border-box: padding & border are INCLUDED in the declared width ===== */
+.border-box {
+  box-sizing: border-box;
+  background-color: #dcfce7;
+  border-color: #16a34a;
+  color: #14532d;
+}
+
+.explanation {
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.explanation code {
+  background-color: #e2e8f0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+/* ===== Responsive stacking ===== */
+@media (max-width: 520px) {
+  .comparison-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}

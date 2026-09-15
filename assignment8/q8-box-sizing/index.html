@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+  </header>
+
+  <main>
+    <section class="comparison-row">
+
+      <article class="box content-box">
+        <h2>content-box</h2>
+        <p>Width: 200px<br>Padding: 20px<br>Border: 5px</p>
+        <p class="total">Rendered width = 200 + (20&times;2) + (5&times;2) = 250px</p>
+      </article>
+
+      <article class="box border-box">
+        <h2>border-box</h2>
+        <p>Width: 200px<br>Padding: 20px<br>Border: 5px</p>
+        <p class="total">Rendered width = 200px (padding and border included)</p>
+      </article>
+
+    </section>
+
+    <p class="explanation">
+      By default, browsers use <code>content-box</code>, where padding and border are added
+      on top of the specified width, making the element larger than intended. Setting
+      <code>box-sizing: border-box</code> keeps the total width fixed by including padding
+      and border inside that width, which makes layouts far more predictable.
+    </p>
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 8: Box-Sizing Comparison</p>
+  </footer>
+</body>
+</html>
