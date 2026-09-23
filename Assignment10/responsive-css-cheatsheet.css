@@ -1,0 +1,72 @@
+/* ===== Reset & base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #2d2d2d;
+}
+
+.page-header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #00b894;
+    color: #ffffff;
+}
+
+/* ===== Cheat sheet: CSS Grid, 2-3 columns on large screens ===== */
+.cheatsheet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.topic-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #00b894;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-box h2 {
+    color: #00895f;
+    margin-bottom: 0.5rem;
+}
+
+.topic-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Medium screens: 2 columns ===== */
+@media (max-width: 900px) {
+    .cheatsheet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Small screens: stacked key/value rows ===== */
+@media (max-width: 700px) {
+    .cheatsheet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .topic-box h2 {
+        font-size: 1.1rem;
+    }
+}
