@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 7</title>
+</head>
+<body>
+<script>
+  const question = new URLSearchParams(location.search).get("q");
+  if (!question) {
+    document.body.innerHTML = "<h3>Pick a question</h3>" +
+      [1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => `<p><a href="run.html?q=q${n}">Question ${n}</a></p>`).join("");
+  } else {
+    const script = document.createElement("script");
+    script.src = question + ".js";
+    document.body.appendChild(script);
+  }
+</script>
+</body>
+</html>
