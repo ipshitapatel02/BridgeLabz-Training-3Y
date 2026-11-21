@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q10 - Registration Form Validation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>User Registration</h1>
+  </header>
+
+  <main>
+    <section>
+      <form id="registerForm" novalidate>
+        <label for="nameField">Name</label>
+        <input type="text" id="nameField">
+        <p class="error"></p>
+
+        <label for="emailField">Email</label>
+        <input type="text" id="emailField">
+        <p class="error"></p>
+
+        <label for="passwordField">Password (min 8 characters)</label>
+        <input type="password" id="passwordField">
+        <p class="error"></p>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p id="successMessage" class="success"></p>
+    </section>
+
+    <section>
+      <h2>Already registered emails</h2>
+      <ul id="registeredList">
+        <li>admin@example.com</li>
+        <li>test@example.com</li>
+        <li>user@example.com</li>
+        <li>demo@example.com</li>
+        <li>hello@example.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q10_registration_form.js"></script>
+</body>
+</html>

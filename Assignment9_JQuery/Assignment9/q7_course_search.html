@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q7 - Search Courses</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Search Courses</h1>
+    <input type="text" id="searchInput" placeholder="Search courses...">
+    <button id="clearBtn">Clear</button>
+    <p>Courses found: <strong id="courseCount">8</strong></p>
+  </header>
+
+  <main>
+    <ul id="courseList">
+      <li class="course"><h3 class="course-title">JavaScript Basics</h3><p>Learn variables, functions and the DOM.</p></li>
+      <li class="course"><h3 class="course-title">Advanced JavaScript</h3><p>Closures, promises and async code.</p></li>
+      <li class="course"><h3 class="course-title">HTML and CSS</h3><p>Build and style modern web pages.</p></li>
+      <li class="course"><h3 class="course-title">Python for Beginners</h3><p>Start programming with Python.</p></li>
+      <li class="course"><h3 class="course-title">Data Structures</h3><p>Arrays, stacks, queues and trees.</p></li>
+      <li class="course"><h3 class="course-title">Database Management</h3><p>SQL queries and database design.</p></li>
+      <li class="course"><h3 class="course-title">React Fundamentals</h3><p>Components, props and state.</p></li>
+      <li class="course"><h3 class="course-title">Machine Learning Intro</h3><p>Basics of models and training data.</p></li>
+    </ul>
+    <p id="noCourses" class="error" style="display:none;">No courses match your search.</p>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q7_course_search.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q9 - Multi jQuery Widgets</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard with Two jQuery Versions</h1>
+    <p>Version 1 = jQuery 1.12.4 (carousel, active widget). Version 2 = jQuery 3.7.1 (modal, tooltips).</p>
+  </header>
+
+  <main>
+    <section class="widget" id="carouselWidget">
+      <h2>Carousel (Version 1)</h2>
+      <div class="carousel">
+        <div class="slide">Slide 1: Welcome to the dashboard</div>
+        <div class="slide">Slide 2: Sales are up 12%</div>
+        <div class="slide">Slide 3: 5 new messages</div>
+        <div class="slide">Slide 4: Server status is healthy</div>
+        <div class="slide">Slide 5: Maintenance on Sunday</div>
+      </div>
+    </section>
+
+    <section class="widget" id="notifyWidget">
+      <h2>Notifications (Version 2)</h2>
+      <button id="openModalBtn">Show Notification</button>
+    </section>
+
+    <section class="widget" id="tooltipWidget">
+      <h2>Tooltips (Version 2) - hover the items</h2>
+      <span class="tip-item" data-tip="Total users today">Users</span>
+      <span class="tip-item" data-tip="Revenue this month">Revenue</span>
+      <span class="tip-item" data-tip="Open support tickets">Tickets</span>
+      <span class="tip-item" data-tip="Average page load time">Speed</span>
+      <span class="tip-item" data-tip="Pending orders">Orders</span>
+    </section>
+  </main>
+
+  <footer>
+    <p id="versionInfo"></p>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <h2>New Notification</h2>
+      <p>You have 3 unread alerts.</p>
+      <button id="closeModalBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Load version 1, then immediately give it its own name with noConflict(true) -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>var jqV1 = jQuery.noConflict(true);</script>
+
+  <!-- Load version 2, and also give it its own name -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>var jqV3 = jQuery.noConflict(true);</script>
+
+  <script src="q9_multi_jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q5 - Team Members Directory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Team Members Directory</h1>
+    <p>Click a manager, hover an employee, or click a department name.</p>
+    <button id="randomBtn">Pick Random Employee</button>
+    <p id="randomResult"></p>
+  </header>
+
+  <main>
+    <!-- data-color: background used when the department title is clicked -->
+    <section class="department" data-color="#fdebd0">
+      <h2 class="dept-title">Engineering</h2>
+      <button class="toggle-team">Collapse / Expand</button>
+      <ul class="team">
+        <li class="employee manager" data-id="m1">Meera Rao (Manager)</li>
+        <li class="contact">meera@company.com | +91 98100 00001</li>
+        <li class="employee" data-manager="m1">Arjun Patel</li>
+        <li class="contact">arjun@company.com | +91 98100 00002</li>
+        <li class="employee" data-manager="m1">Sana Khan</li>
+        <li class="contact">sana@company.com | +91 98100 00003</li>
+        <li class="employee" data-manager="m1">Kabir Das</li>
+        <li class="contact">kabir@company.com | +91 98100 00004</li>
+      </ul>
+    </section>
+
+    <section class="department" data-color="#d6eaf8">
+      <h2 class="dept-title">Design</h2>
+      <button class="toggle-team">Collapse / Expand</button>
+      <ul class="team">
+        <li class="employee manager" data-id="m2">Rohan Iyer (Manager)</li>
+        <li class="contact">rohan@company.com | +91 98100 00005</li>
+        <li class="employee" data-manager="m2">Ishita Joshi</li>
+        <li class="contact">ishita@company.com | +91 98100 00006</li>
+        <li class="employee" data-manager="m2">Neha Bose</li>
+        <li class="contact">neha@company.com | +91 98100 00007</li>
+        <li class="employee" data-manager="m2">Dev Malhotra</li>
+        <li class="contact">dev@company.com | +91 98100 00008</li>
+      </ul>
+    </section>
+
+    <section class="department" data-color="#d5f5e3">
+      <h2 class="dept-title">Marketing</h2>
+      <button class="toggle-team">Collapse / Expand</button>
+      <ul class="team">
+        <li class="employee manager" data-id="m3">Priya Nair (Manager)</li>
+        <li class="contact">priya@company.com | +91 98100 00009</li>
+        <li class="employee" data-manager="m3">Vikram Sen</li>
+        <li class="contact">vikram@company.com | +91 98100 00010</li>
+        <li class="employee" data-manager="m3">Anita Roy</li>
+        <li class="contact">anita@company.com | +91 98100 00011</li>
+        <li class="employee" data-manager="m3">Tanmay Shah</li>
+        <li class="contact">tanmay@company.com | +91 98100 00012</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q5_team_directory.js"></script>
+</body>
+</html>

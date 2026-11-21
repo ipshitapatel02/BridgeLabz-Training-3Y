@@ -1,0 +1,340 @@
+/* ===== Shared base styles for all Assignment 9 pages ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 760px;
+  margin: 30px auto;
+  padding: 0 16px;
+  color: #222222;
+  background: #fafafa;
+}
+
+header,
+footer {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+button {
+  font-size: 0.95rem;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+input,
+select {
+  font-size: 0.95rem;
+  padding: 7px;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  min-height: 1.1em;
+  margin: 3px 0 8px;
+}
+
+.success {
+  color: #1e8449;
+  font-weight: bold;
+}
+
+/* ===== Q1: Greeting ===== */
+#greeting {
+  cursor: pointer;
+  color: #1a5276;
+}
+
+#welcomeMessage {
+  padding: 12px;
+  background: #eaf2f8;
+  border-radius: 6px;
+}
+
+/* ===== Q2: Products ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.product {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.product.highlight {
+  background: #fcf3cf;
+}
+
+.product.on-sale {
+  border: 2px dashed #e67e22;
+}
+
+.product[data-stock="0"] {
+  opacity: 0.55;
+}
+
+.details {
+  display: none;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+.fav {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  color: #aaaaaa;
+}
+
+.fav.selected {
+  color: #e74c3c;
+}
+
+/* ===== Q3: FAQ ===== */
+.faq-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.question {
+  margin: 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.answer {
+  display: none;
+  margin-top: 8px;
+}
+
+/* ===== Q4: Banners ===== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.banner,
+.slide {
+  padding: 18px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.banner:nth-child(1), .slide:nth-child(1) { background: #e74c3c; }
+.banner:nth-child(2), .slide:nth-child(2) { background: #2980b9; }
+.banner:nth-child(3), .slide:nth-child(3) { background: #27ae60; }
+.banner:nth-child(4), .slide:nth-child(4) { background: #8e44ad; }
+.banner:nth-child(5), .slide:nth-child(5) { background: #d68910; }
+
+/* ===== Q5: Directory ===== */
+.department {
+  margin-bottom: 18px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.dept-title {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.team {
+  list-style: none;
+  padding: 0;
+}
+
+.employee {
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background: #f4f6f7;
+  cursor: pointer;
+}
+
+.employee.manager {
+  font-weight: bold;
+}
+
+.employee.report {
+  background: #d5f5e3;
+}
+
+.employee.picked {
+  background: #f9e79f;
+}
+
+.employee.sibling-highlight {
+  background: #d6eaf8;
+}
+
+.contact {
+  display: none;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  color: #555555;
+}
+
+/* ===== Q6: Subscriptions ===== */
+#topicList {
+  list-style: none;
+  padding: 0;
+}
+
+#topicList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.topic-name {
+  cursor: pointer;
+}
+
+#topicList li.subscribed {
+  background: #d5f5e3;
+}
+
+/* ===== Q7: Course search ===== */
+#courseList {
+  list-style: none;
+  padding: 0;
+}
+
+.course {
+  padding: 10px;
+  margin-bottom: 6px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.course h3,
+.course p {
+  margin: 2px 0;
+}
+
+/* ===== Q8: Blog posts ===== */
+.post {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.post.featured {
+  border-left: 5px solid #e67e22;
+}
+
+.post.highlight {
+  background: #fcf3cf;
+}
+
+.tag,
+.label {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 0 6px 4px 0;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background: #d6eaf8;
+}
+
+.label {
+  background: #fadbd8;
+}
+
+/* ===== Q9: Multi-jQuery widgets ===== */
+.widget {
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 2px solid #cccccc;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.widget.active-widget {
+  border-color: #2980b9;
+  background: #eaf2f8;
+}
+
+.carousel .slide {
+  display: none;
+  margin: 0;
+}
+
+.tip-item {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 4px;
+  background: #ebedef;
+  cursor: help;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #ffffff;
+  background: #333333;
+  z-index: 20;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-box {
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+/* ===== Q10: Registration form ===== */
+#registerForm input {
+  width: 100%;
+  border: 2px solid #aaaaaa;
+}
+
+#registerForm label {
+  display: block;
+  margin-top: 8px;
+}

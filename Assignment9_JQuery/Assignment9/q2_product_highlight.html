@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 - Product Highlight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Highlight</h1>
+    <p>Click to highlight, hover for details, use the heart to favorite. Dashed border = discount.</p>
+  </header>
+
+  <main>
+    <section class="product-grid">
+      <!-- data-stock = units left, data-discount = discount percent (only on discounted items) -->
+      <article class="product" data-stock="12" data-discount="20">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>Wireless Mouse</h2>
+        <p>Rs. 800</p>
+        <div class="details">Bluetooth, 2-year warranty, 20% off.</div>
+      </article>
+
+      <article class="product" data-stock="5">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>Keyboard</h2>
+        <p>Rs. 1,500</p>
+        <div class="details">Mechanical, backlit, USB-C.</div>
+      </article>
+
+      <article class="product" data-stock="0" data-discount="50">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>Headphones</h2>
+        <p>Rs. 2,000</p>
+        <div class="details">Noise cancelling, 50% off (sold out).</div>
+      </article>
+
+      <article class="product" data-stock="8">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>Webcam</h2>
+        <p>Rs. 2,500</p>
+        <div class="details">1080p, built-in microphone.</div>
+      </article>
+
+      <article class="product" data-stock="0">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>Monitor</h2>
+        <p>Rs. 9,000</p>
+        <div class="details">24 inch, Full HD (sold out).</div>
+      </article>
+
+      <article class="product" data-stock="20" data-discount="10">
+        <button class="fav" aria-label="Favorite">&#9829;</button>
+        <h2>USB Hub</h2>
+        <p>Rs. 600</p>
+        <div class="details">4 ports, 10% off.</div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q2_product_highlight.js"></script>
+</body>
+</html>

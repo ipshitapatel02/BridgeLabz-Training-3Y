@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q4 - Special Offer Banner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Special Offer Banners</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Banner Controls</h2>
+      <!-- Choose which banner the buttons act on -->
+      <label for="bannerTarget">Target banner:</label>
+      <select id="bannerTarget">
+        <option value="all">All banners</option>
+        <option value="1">Banner 1</option>
+        <option value="2">Banner 2</option>
+        <option value="3">Banner 3</option>
+        <option value="4">Banner 4</option>
+        <option value="5">Banner 5</option>
+      </select>
+
+      <div class="controls">
+        <button id="hideBtn">Hide</button>
+        <button id="showBtn">Show</button>
+        <button id="slideUpBtn">Slide Up</button>
+        <button id="slideDownBtn">Slide Down</button>
+        <button id="fadeOutBtn">Fade Out</button>
+        <button id="fadeInBtn">Fade In</button>
+      </div>
+
+      <div id="bannerList">
+        <div class="banner">Banner 1: Flat 20% off on electronics</div>
+        <div class="banner">Banner 2: Free delivery above Rs. 999</div>
+        <div class="banner">Banner 3: Buy 1 Get 1 on fashion</div>
+        <div class="banner">Banner 4: Festival sale - up to 60% off</div>
+        <div class="banner">Banner 5: Extra 10% cashback on UPI</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Rotating Promotions (changes every 5 seconds)</h2>
+      <div id="rotator">
+        <div class="slide">Promo 1: New arrivals are here</div>
+        <div class="slide">Promo 2: Weekend mega deals</div>
+        <div class="slide">Promo 3: Members get early access</div>
+        <div class="slide">Promo 4: Clearance sale ends soon</div>
+        <div class="slide">Promo 5: Gift cards now available</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q4_offer_banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q6 - Event Subscription Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Event Subscription Panel</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Notifications</h2>
+      <p>Status: <strong id="notifyStatus">OFF</strong></p>
+      <button id="subscribeBtn">Subscribe</button>
+      <button id="unsubscribeBtn" disabled>Unsubscribe</button>
+    </section>
+
+    <section>
+      <h2>Topics (click a topic name to subscribe to it)</h2>
+      <ul id="topicList">
+        <li><span class="topic-name">Tech News</span> <button class="remove-topic">Remove</button></li>
+        <li><span class="topic-name">Sports</span> <button class="remove-topic">Remove</button></li>
+        <li><span class="topic-name">Music</span> <button class="remove-topic">Remove</button></li>
+        <li><span class="topic-name">Movies</span> <button class="remove-topic">Remove</button></li>
+        <li><span class="topic-name">Science</span> <button class="remove-topic">Remove</button></li>
+      </ul>
+
+      <input type="text" id="topicInput" placeholder="New topic name">
+      <button id="addTopicBtn">Add Topic</button>
+    </section>
+
+    <!-- Success messages are inserted here by the script -->
+    <section id="messages" aria-live="polite"></section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="q6_subscription_panel.js"></script>
+</body>
+</html>
